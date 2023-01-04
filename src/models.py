@@ -8,9 +8,11 @@ class User(db.Model):
     password = db.Column(db.String(80), unique=False, nullable=False)
     is_active = db.Column(db.Boolean(), unique=False, nullable=False)
 
+    # para crear un correo electrónico 
     def __repr__(self):
         return '<User %r>' % self.username
 
+    # sirve para traer información valiosa que se pueda traer
     def serialize(self):
         return {
             "id": self.id,
