@@ -101,7 +101,7 @@ def post_fav_planet(planet_id):
     })
 
 @app.route("/favorite/people/<int:planet_id>", methods=['POST'])
-def post_fav_planet(people_id):
+def post_fav_people(people_id):
     
     return jsonify({
         "mensaje": "el planeta con id "+ str(people_id) + " ha sido agregado"
@@ -116,7 +116,7 @@ def delete_fav_planet(planet_id):
     })
 
 @app.route("/favorite/people/<int:planet_id>", methods=['DELETE'])
-def delete_fav_planet(people_id):
+def delete_fav_people(people_id):
     
     return jsonify({
         "mensaje": "el planeta con id "+ str(people_id) + " ha sido eliminado"
